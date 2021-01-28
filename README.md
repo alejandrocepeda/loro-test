@@ -19,7 +19,7 @@ cp app/.env.example app/.env
 ```
 
 
-### 3. Install and run Docker Compose
+### 3. Install & run Docker Compose
 ```console
 sudo curl -L "https://github.com/docker/compose/releases/download/1.26.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 sudo chmod +x /usr/local/bin/docker-compose
@@ -27,11 +27,11 @@ sudo chmod +x /usr/local/bin/docker-compose
 docker-compose up -d
 ```
 
-### 4. Docker Compose
+### 4. Run composer install & Laravel migrations and seeders
 ```console
 docker exec -it loro-laravel-php composer install
 docker exec -it loro-laravel-php php artisan migrate
 docker exec -it loro-laravel-php php artisan db:seed
 ```
 
-### 4. Finnaly open in your browser http://localhost:8080
+### 5. Finnaly open in your browser http://localhost:8080
