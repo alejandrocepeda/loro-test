@@ -29,9 +29,9 @@ docker-compose up -d
 
 ### 4. Run composer install & Laravel migrations and seeders
 ```console
-docker exec -it loro-laravel-php composer install
-docker exec -it loro-laravel-php php artisan migrate
-docker exec -it loro-laravel-php php artisan db:seed
+sudo docker exec -it loro-laravel-php composer install
+sudo docker exec -it loro-laravel-php php artisan migrate
+sudo docker exec -it loro-laravel-php php artisan db:seed
 ```
 
 ### 5. Finnaly open in your browser http://localhost:8080
