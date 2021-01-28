@@ -1,11 +1,12 @@
 # Prueba Técnica Loro
 
-
 ## The database schema
 <p align="center"><img width="700" src="https://raw.githubusercontent.com/alejandrocepeda/loro-test/master/database-schema.png"></p>
 
+## Demo
+https://caballosenlinea.com/
 
-## Usage Steps
+## Install Steps
 
 ### 1. Clone repository
 ```console
