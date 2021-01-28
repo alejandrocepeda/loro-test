@@ -1,7 +1,7 @@
 version: '3'
 
 services:
-  mysql:
+  mysql-loro:
     image: mysql:${MYSQL_VERSION}
     container_name: ${MYSQL_CONTAINER_NAME}
     ports:
