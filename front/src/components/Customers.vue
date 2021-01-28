@@ -88,7 +88,7 @@ export default {
       remove(customer){
 
           this.$swal({
-            title: "Listo",            
+            title: "Seguro que quiere eliminar este cliente ?",            
             type: 'question',
             customClass: 'bg-body',                
             showCancelButton: true,          
