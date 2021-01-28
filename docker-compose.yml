@@ -1,0 +1,52 @@
+version: '3'
+
+services:
+  mysql:
+    image: mysql:${MYSQL_VERSION}
+    container_name: ${MYSQL_CONTAINER_NAME}
+    ports:
+      - ${MYSQL_PORT_HOST}:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_USER_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DB}
+      MYSQL_ROOT_HOST: '%'
+    volumes:
+      - ${MYSQL_DATA_PATH}/db:/var/lib/mysql
+      - ${MYSQL_DATA_PATH}/log:/var/lib/log
+    networks:      
+      - docker-php-mysql-nginx
+  nginx:
+    image: nginx
+    container_name: ${NGINX_CONTAINER_NAME}
+    volumes:      
+      - ${NGINX_CONF_PATH}:/etc/nginx/conf.d
+      - ${PHP_CODE_PATH}:/usr/share/nginx/html
+    ports:
+      - ${NGINX_PORT}:80    
+    depends_on:
+      - php
+      - mysql
+    networks:
+      - docker-php-mysql-nginx      
+  nginx_html:
+    image: nginx
+    container_name: nginx-html-loro
+    volumes:
+      - ${NGINX_HTML_PATH}:/usr/share/nginx/html
+    ports:
+      - ${NGINX_HTML_PORT}:80
+  php:
+    build: ./php-fpm
+    container_name: ${PHP_CONTAINER_NAME}
+    volumes:
+      - ${PHP_CODE_PATH}:/usr/share/nginx/html
+    ports:
+      - ${PHP_HOST_PORT}:9000
+    networks:
+      - docker-php-mysql-nginx
+      
+networks:
+  docker-php-mysql-nginx:     
+      
