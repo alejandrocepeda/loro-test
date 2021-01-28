@@ -4,7 +4,7 @@
 <p align="center"><img width="700" src="https://raw.githubusercontent.com/alejandrocepeda/loro-test/master/database-schema.png"></p>
 
 ## Demo link
-<a href="https://caballosenlinea.com" target="_blank" rel="noopener"><span>Click here</span></a>
+<a href="https://caballosenlinea.net" target="_blank" rel="noopener"><span>Click here</span></a>
 
 ## Install Steps
 
