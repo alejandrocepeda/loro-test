@@ -4,6 +4,7 @@
 ## The database schema
 <p align="center"><img width="700" src="https://raw.githubusercontent.com/alejandrocepeda/loro-test/master/database-schema.png"></p>
 
+
 ## Usage Steps
 
 ### 1. Clone repository
@@ -11,11 +12,11 @@
 git clone https://github.com/alejandrocepeda/loro-test.git
 ```
 
-### 2. Copy your .env file & permissions:
+### 2. Copy your Laravel .env file & Permissions:
 ```console
 cd loro-test
 cp app/.env.example app/.env
-cp app/.env.example app/.env
+chmod -R 777 app/storage
 ```
 
 ### 3. Install & run Docker Compose
