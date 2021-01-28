@@ -1,7 +1,7 @@
 version: '3'
 
 services:
-  mysql-loro:
+  mysql_loro:
     image: mysql:${MYSQL_VERSION}
     container_name: ${MYSQL_CONTAINER_NAME}
     ports:
@@ -27,7 +27,7 @@ services:
       - ${NGINX_PORT}:80    
     depends_on:
       - php
-      - mysql
+      - mysql_loro
     networks:
       - docker-php-mysql-nginx      
   nginx_html:
