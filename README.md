@@ -31,7 +31,7 @@ docker-compose up -d
 ```console
 docker exec -it loro-laravel-php composer install
 docker exec -it loro-laravel-php php artisan migrate
-docker exec -it loro-laravel-php php db:seed
+docker exec -it loro-laravel-php php artisan db:seed
 ```
 
 ### 4. Finnaly open in your browser http://localhost:8080
