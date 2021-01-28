@@ -15,7 +15,7 @@ git clone https://github.com/alejandrocepeda/loro-test.git
 ### 2. Copy your .env file:
 ```console
 cd loro-test
-cp app/.env.example .env
+cp app/.env.example app/.env
 ```
 
 
